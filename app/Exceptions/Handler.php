@@ -35,7 +35,10 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->reportable(function (Throwable $e) {
-            //
+            // return response()->json(['message' => 'Object not found'], 404);
         });
+        // $this->renderable(function (Throwable $e) {
+        //     return response()->json(['message' => 'Object not found'], 404);
+        // });
     }
 }
