@@ -16,13 +16,13 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return Category::all();
-    }
-
-    public function index_v2()
-    {
         return CategoryResource::collection(Category::all());
     }
+
+    // public function index_v2()
+    // {
+    //     return CategoryResource::collection(Category::all());
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -43,7 +43,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return new CategoryResource($category);
     }
 
     /**
